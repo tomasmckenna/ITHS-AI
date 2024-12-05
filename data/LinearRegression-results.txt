@@ -1,0 +1,7 @@
+------ Linear Regression Results ------
+Mean Squared Error: 254.7963
+R-squared: 0.1464
+
+Cross-Validation Results:
+Cross-Validated R-squared Scores: 0.1044, 0.0983, 0.1156, 0.1339, 0.1111
+Mean R-squared: 0.1127

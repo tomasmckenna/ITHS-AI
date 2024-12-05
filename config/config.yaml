@@ -1,0 +1,14 @@
+# config.yaml
+#  mac: "/Users/tomas/Documents/GitHub/ITHS-AI-Project/config/config.yaml"
+#  linux: "/home/tomas/GitHub/ITHS-AI-Project/config/config/.yaml"
+requirements: 
+  mac: "/Users/tomas/Documents/GitHub/ITHS-AI-Project/config/requirements.txt"
+  linux: "/home/tomas/GitHub/ITHS-AI-Project/config/requirements.txt"
+
+file_paths:
+  linux: "/home/tomas/GitHub/ITHS-AI-Project/data/allData2.xlsx"
+  mac: "/Users/tomas/Documents/GitHub/ITHS-AI-Project/data/allData2.xlsx"
+
+output_file_path:
+  linux: "/home/tomas/GitHub/ITHS-AI-Project/data/df.xlsx"
+  mac: "/Users/tomas/Documents/GitHub/ITHS-AI-Project/data/df.xlsx"
