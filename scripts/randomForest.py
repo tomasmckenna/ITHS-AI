@@ -6,7 +6,12 @@ import matplotlib.pyplot as plt
 import os
 
 # Load and filter the dataset
-file_path = "/Users/tomas/Documents/GitHub/ITHS-AI-Project/data/df.xlsx"
+file_path = "/home/tomas/GitHub/ITHS-AI/data/df.xlsx"
+#config = load_config('/home/tomas/GitHub/AImed/config/config.yaml')
+#  windows: "C:\\Users\\jenny\\Documents\\GitHub\\AImed\\config\\config.yaml"
+#  mac: "/Users/tomas/Documents/GitHub/AImed/config/config.yaml"
+#  linux: "/home/tomas/GitHub/AImed/config/config.yaml"
+
 df = pd.read_excel(file_path)
 df = df[df['Information'] == 'match']
 
@@ -69,7 +74,7 @@ plt.title("Random Forest Feature Importances")
 plt.gca().invert_yaxis()
 plt.show()
 
-output_dir ='/Users/tomas/Documents/GitHub/ITHS-AI-Project/data/'
+output_dir ='/home/tomas/GitHub/ITHS-AI/data/'
 results_file_path = os.path.join(output_dir, "RandomForest-results.txt")
 with open(results_file_path, "w") as results_file:
     results_file.write("------ Random Forest Regression Results ------\n")

@@ -1,7 +1,7 @@
 ------ Random Forest Regression Results ------
-Mean Squared Error: 195.3779
-R-squared: 0.3455
+Mean Squared Error: 195.3502
+R-squared: 0.3456
 
 Cross-Validation Results:
-Cross-Validated R-squared Scores: 0.3001, 0.3181, 0.3368, 0.3421, 0.2261
-Mean R-squared: 0.3046
+Cross-Validated R-squared Scores: 0.3004, 0.3187, 0.3369, 0.3420, 0.2259
+Mean R-squared: 0.3048
