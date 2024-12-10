@@ -1,0 +1,4 @@
+------ LazyPredict Model Comparison ------
+                Adjusted R-Squared  R-Squared  RMSE  Time Taken
+Model                                                          
+DummyRegressor               -0.02      -0.00 17.29        0.00

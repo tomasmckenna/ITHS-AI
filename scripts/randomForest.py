@@ -13,11 +13,10 @@ file_path = "/home/tomas/GitHub/ITHS-AI/data/df.xlsx"
 #  linux: "/home/tomas/GitHub/AImed/config/config.yaml"
 
 df = pd.read_excel(file_path)
-df = df[df['Information'] == 'match']
+df = df[df['Information'] == 'match'] #just use matched rows
 
 # Define features and target
-df_features = df[['Activities.ActivityCategory', 'Activities.doubleStaffing', 'gender', 
-                  'ageSpan', 'SpanDistanceM', 'SpanCarStartTime']]
+df_features = df[['Activities.ActivityCategory', 'Activities.doubleStaffing', 'gender',  'ageSpan', 'SpanDistanceM', 'SpanCarStartTime']]
 
 # Target encoding for Activities.ActivityCategory
 activity_category_means = df.groupby('Activities.ActivityCategory')['DurationMin'].mean()
@@ -26,7 +25,7 @@ df_features = df_features.drop(columns=['Activities.ActivityCategory'])
 
 # One-hot encoding for other categorical features
 categorical_features = ['Activities.doubleStaffing', 'gender', 'ageSpan', 'SpanDistanceM', 'SpanCarStartTime']
-df_features = pd.get_dummies(df_features, columns=categorical_features, drop_first=True)
+df_features = pd.get_dummies(df_features, columns=categorical_features, drop_first=True)#drop first redundant column of dummy variables
 
 target = df['DurationMin']
 
@@ -37,7 +36,7 @@ if target.isnull().any():
     print("Target contains NaN")
 
 # Split into train and test sets
-x_train, x_test, y_train, y_test = train_test_split(df_features, target, test_size=0.2, random_state=42)
+x_train, x_test, y_train, y_test = train_test_split(df_features, target, test_size=0.2, random_state=4562)
 
 # Fit the Random Forest Regressor model
 model = RandomForestRegressor(n_estimators=100, random_state=42)
